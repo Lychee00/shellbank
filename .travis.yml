@@ -8,12 +8,12 @@ before_install:
 
 script:
   - wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
-  - wget https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z  
+  - wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
   - 7z x -ot web_log.tsv.7z
   - ls -l
   - bash img_process.sh -h
   - bash img_process.sh -q 80
-  - bash img_process.sh -r 70%
+  - bash img_process.sh -d 70%
   - bash img_process.sh -w 5 lychee
   - bash img_process.sh -p pre
   - bash img_process.sh -s post
